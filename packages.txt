@@ -1,6 +1,6 @@
-build-essential
-pkg-config
-node@20.10.0
-
+csv-parser
+csv-writer
+nodejs
+puppeteer
 
 
