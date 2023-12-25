@@ -1,6 +1,8 @@
-swift-scraper@1.0.0
-├── csv-parser@3.0.0
-├── csv-writer@1.6.0
-├── node@20.10.0
-└── puppeteer@21.6.1
+build-essential
+pkg-config
+csv-parser@3.0.0
+csv-writer@1.6.0
+node@20.10.0
+puppeteer@21.6.1
+
 
