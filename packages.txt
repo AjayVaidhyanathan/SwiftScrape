@@ -1,4 +1,4 @@
-swift-scraper@1.0.0 /Users/ajayvaidhyanathan/Desktop/Dream Driven/Scrapy
+swift-scraper@1.0.0
 ├── csv-parser@3.0.0
 ├── csv-writer@1.6.0
 ├── node@20.10.0
