@@ -1,4 +1,14 @@
 {
+  "name": "swift-scraper",
+  "version": "1.0.0",
+  "description": "Your project description",
+  "main": "scrapy-main.js",
+  "scripts": {
+    "install": "npm install"
+  },
+  "keywords": [],
+  "author": "AJ",
+  "license": "ISC",
   "dependencies": {
     "csv-parser": "^3.0.0",
     "csv-writer": "^1.6.0",
