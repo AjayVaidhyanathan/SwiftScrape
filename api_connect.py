@@ -2,7 +2,7 @@ import streamlit as st
 import openai
 import pandas as pd
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 def process_user_input(user_input, prompt_1, prompt_2, prompt_3, prompt_4, prompt_5, prompt_6,prompt_7,prompt_8,prompt_9):
     separator = "###"  # Use a unique separator
