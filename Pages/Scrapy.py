@@ -4,6 +4,13 @@ import subprocess
 import os
 import json
 
+st.set_page_config(
+    page_title="Scrapy",
+    page_icon="🕸️",
+    layout="centered",
+    initial_sidebar_state="auto",
+)
+        
 def download_file(file_path, file_name):
     with open(file_path, "rb") as file:
         contents = file.read()
@@ -11,7 +18,8 @@ def download_file(file_path, file_name):
 
 # Streamlit app
 def main():
-    st.title("Scrapy - Your scrape bot")
+    st.title("🕸️ Scrapy: The Web-Scraping Maestro 🕷️🌐")
+    st.write("Built by AJ with \u2764️")
 
     # File uploader for CSV
     uploaded_file = st.file_uploader("Upload a CSV file", type=["csv"])
@@ -19,7 +27,7 @@ def main():
     if st.button("Display Data"):
         display_scraped_data()
 
-    file_path = "scraped_output.json"
+    file_path = "Pages/scraped_output.json"
     file_name = "scraped_output.json"
 
     if st.button("Download JSON"):
@@ -42,14 +50,14 @@ def main():
         
 # Function to execute Puppeteer script
 def execute_puppeteer_script(csv_path):
-    puppeteer_script_path = "scrapy-main.js"  # Replace with the actual path
+    puppeteer_script_path = "Pages/scrapy-main.js"  # Replace with the actual path
     command = ["node", puppeteer_script_path, csv_path]
     subprocess.run(command, check=True)
 
 # Function to display the scraped data in Streamlit
 def display_scraped_data():
     try:
-        with open('scraped_output.json', 'r') as file:
+        with open('Pages/scraped_output.json', 'r') as file:
             scraped_data = json.load(file)
             st.write("Scraped Data:")
             for entry in scraped_data:

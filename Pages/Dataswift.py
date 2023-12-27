@@ -6,6 +6,13 @@ from tempfile import NamedTemporaryFile
 from api_connect import process_user_input
 from api_connect import split_generated_text
 
+st.set_page_config(
+    page_title="Dataswift",
+    page_icon="🔮",
+    layout="centered",
+    initial_sidebar_state="auto",
+)
+
 prompt_1 = "Based on the input, provide a brief and clear two-sentence description of the tool. Present this information under the title 'One Line Description.' Avoid using bold formatting or double asterisks (**) in the output."
 prompt_2 = "Craft a detailed and comprehensive paragraph-length description based on the input. Present the information under the title 'Long Description.' Ensure that the output does not include bold formatting or double asterisks (**) in the content "
 prompt_3 = "Summarize in detailed key features and functionalities in a bullet-point format based on the text from a website output. Ensure each feature is presented with a bold title. Display the information under the title 'Key Features and Functionalities.' Avoid using bold formatting or double asterisks (**) in the output."
@@ -80,7 +87,7 @@ def process_and_save_data_for_json(json_file_path):
 
 # Streamlit app
 def main():
-    st.title("DataSwift - Data Entry made simple")
+    st.title("🔍 Dataswift: The Data Maestro 🎩📊")
     st.write("Built by AJ with \u2764️")
 
     # File uploader for JSON

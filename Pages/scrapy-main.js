@@ -53,7 +53,7 @@ if (!csvFilePath) {
       await browser.close();
 
       // Write the scraped data to a file
-      fs.writeFileSync('scraped_output.json', JSON.stringify(scrapedData, null, 2));
+      fs.writeFileSync('Pages/scraped_output.json', JSON.stringify(scrapedData, null, 2));
       console.log(`Scraped data written to 'scraped_output.json'`);
 
       // Optional: Log the scraped data for debugging
