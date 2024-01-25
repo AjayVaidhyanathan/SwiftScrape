@@ -13,15 +13,15 @@ st.set_page_config(
     initial_sidebar_state="auto",
 )
 
-prompt_1 = "Based on the input, provide a brief and clear two-sentence description of the tool. Present this information under the title 'One Line Description.' Avoid using bold formatting or double asterisks (**) in the output."
-prompt_2 = "Craft a detailed and comprehensive paragraph-length description based on the input. Present the information under the title 'Long Description.' Ensure that the output does not include bold formatting or double asterisks (**) in the content "
-prompt_3 = "Summarize in detailed key features and functionalities in a bullet-point format based on the text from a website output. Ensure each feature is presented with a bold title. Display the information under the title 'Key Features and Functionalities.' Avoid using bold formatting or double asterisks (**) in the output."
-prompt_4 = "Provide detailed information about the demographic or professional groups that can benefit from using this tool, outlining their characteristics and specific needs. Present the information under the title 'Target Audience' in a structured format using bullet points. "
-prompt_5 = "Specify the various use cases, outlining scenarios or applications where individuals or organizations can benefit from the features and functionalities of this tool. Present the information under the title 'Use Cases.' Avoid using bold formatting or double asterisks (**) in the output."
-prompt_6 = "Can you provide details about the pricing structure of the tool, including different plans and any free or trial versions?Present this information under the title 'Pricing.'"
-prompt_7 = "Where is the tool available, and on what platforms, such as web apps, app stores, extensions, or plugins?. Present this information under the title 'Platform.'"
-prompt_8 = "What is the current business stage of the tool, whether it's in alpha, beta,  emerging, or considered a market leader or any other stage?Present this information under the title 'Stage.'"
-prompt_9 = "In which categories or industries does the tool belong, and can you provide information on any subcategories that further specify its functionalities or services ( don't elaborate in detail, only mention category names with ',' to seperate)? Present this information under the title 'Categories'"
+prompt_1 = "Based on the input, provide a brief and clear two-sentence description of the tool. Present this information under the title 'One Line Description' (avoid using bold formatting or double asterisks)."
+prompt_2 = "Craft a detailed and comprehensive paragraph-length description based on the input. Present the information under the title 'Long Description' (ensure that the output does not include bold formatting or double asterisks)."
+prompt_3 = "Summarize detailed key features and functionalities in a bullet-point format based on the text from a website output. Ensure each feature is presented with a clear title. Display the information under the title 'Key Features and Functionalities' (avoid using bold formatting or double asterisks)."
+prompt_4 = "Provide detailed information about the demographic or professional groups that can benefit from using this tool, outlining their characteristics and specific needs. Present the information under the title 'Target Audience' in a structured format using bullet points."
+prompt_5 = "Specify the various use cases, outlining scenarios or applications where individuals or organizations can benefit from the features and functionalities of this tool. Present the information under the title 'Use Cases' (avoid using bold formatting or double asterisks)."
+prompt_6 = "Can you provide details about the pricing structure of the tool, including different plans and any free or trial versions? Present this information under the title 'Pricing' (ensure no use of bold formatting or double asterisks)."
+prompt_7 = "Where is the tool available, and on what platforms, such as web apps, app stores, extensions, or plugins? Present this information under the title 'Platform' (avoid using bold formatting or double asterisks)."
+prompt_8 = "What is the current business stage of the tool, whether it's in alpha, beta, emerging, or considered a market leader or any other stage? Present this information under the title 'Stage' (ensure no use of bold formatting or double asterisks)."
+prompt_9 = "In which categories or industries does the tool belong? Can you provide information on any subcategories that further specify its functionalities or services? Present this information under the title 'Categories' (don't elaborate in detail, only mention category names with ',' to separate, and avoid using bold formatting or double asterisks)."
 
 def save_to_csv(data):
     try:
@@ -90,6 +90,8 @@ def main():
     st.title("🔍 Dataswift: The Data Maestro 🎩📊")
     st.write("Built by AJ with \u2764️")
 
+    api_key = st.text_input("Enter your API Key:", "")
+    
     # File uploader for JSON
     uploaded_file_json = st.file_uploader("Upload a JSON file", type=["json"])
 
